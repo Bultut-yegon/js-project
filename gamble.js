@@ -16,14 +16,16 @@ const SYMBOLS_COUNT={
     A:2,
     B:4,
     C:6,
-    D:8
+    D:8,
+    E:10
     
 }
 const SYMBOL_VALUE={
     A:5,
     B:4,
     C:3,
-    D:2 
+    D:2,
+    E:1
 }
 
 
@@ -97,7 +99,7 @@ const spin=()=>{
     return reels;
 };
 
-const transpose= () =>{
+const transpose= (reels) =>{
     const rows=[];
     for(let i=0; i<ROWS; i++){
         rows.push([]);
@@ -114,4 +116,6 @@ spin();
 let theBalance =depositMoney();
 const numberOfLines=getNumberOfLines();
 const bet=getBet(theBalance);
+const trans=transpose(reels);
+console.log(trans);
 

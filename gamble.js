@@ -5,6 +5,8 @@
 //check if the user won
 //give their winnings
 //play again
+
+const math = require ("mathjs");
 const prompt = require("prompt-sync")();
 
 const ROWS = 5;
@@ -27,7 +29,7 @@ const SYMBOL_VALUE={
 
 const depositMoney=()=>{
     while (true){
-    const depositAmount=prompt("Enter deposit amount");
+    const depositAmount=prompt("Enter deposit amount: ");
     const numberDeposit=parseFloat(depositAmount);
     
     if(isNaN(numberDeposit) || numberDeposit<=0){
@@ -42,7 +44,7 @@ const depositMoney=()=>{
 
 const getNumberOfLines=()=>{
     while (true){
-        const lines=prompt("Enter the number of lines to bet on between 1-5");
+        const lines=prompt("Enter the number of lines to bet on between 1-5: ");
         const numberOfLines=parseFloat(lines);
         
         if(isNaN(numberOfLines) || numberOfLines<=0 || numberOfLines>5){
@@ -57,7 +59,7 @@ const getNumberOfLines=()=>{
 
 const getBet=(theBalance, lines)=>{
      while (true){
-    const bet=prompt("Enter bet amount per lin");
+    const bet=prompt("Enter bet amount per line: ");
     const numberBet=parseFloat(bet); 
     
     if(isNaN(numberBet) || numberBet<=0 || numberBet>theBalance / lines){

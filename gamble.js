@@ -97,6 +97,18 @@ const spin=()=>{
     return reels;
 };
 
+const transpose= () =>{
+    const rows=[];
+    for(let i=0; i<ROWS; i++){
+        rows.push([]);
+        for(let j=0; j<COLUMNS; j++){
+            rows[i].push(reels[j][i])
+            
+        }
+    }
+    return rows;
+};
+
 
 spin();
 let theBalance =depositMoney();

@@ -1,2 +1,4 @@
 # js-project
-gambling 
+
+gambling
+Spinning machine

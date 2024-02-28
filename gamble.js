@@ -80,8 +80,9 @@ const spin=()=>{
         
     }
 
-    const reels=[[],[],[],[],[]];
-    for(let i=0;i<COLUMNS_COUNT;i++){
+    const reels=[];
+    for(let i=0;i<COLUMNS;i++){
+        reels.push([]);
         const reelSymbols = [...symbols];
         for(j=0;j<ROWS;j++){
             const randomIndexing= math.floor(math.random()* reelSymbols.length);
@@ -90,8 +91,8 @@ const spin=()=>{
             reelSymbols.splice(randomIndexing, 1);
         }
     }
-
-    console.log(symbols);
+    
+    return reels;
 };
 
 

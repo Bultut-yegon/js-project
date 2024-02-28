@@ -1,0 +1,15 @@
+{
+  "name": "js-project",
+  "version": "1.0.0",
+  "description": "gambling Spinning machine",
+  "main": "gamble.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mathjs": "^12.4.0",
+    "prompt-sync": "^4.2.0"
+  }
+}
